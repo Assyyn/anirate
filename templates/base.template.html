@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Anirate - Rate Anime{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body>
+    {% block navbar %}
+    <div class="navbar bg-base">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl" href="{% url 'core:index' %}">AniRate</a>
+        </div>
+        <div class="flex-none gap-2">
+            <div class="form-control">
+                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+            </div>
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-10 rounded-full">
+                        <img alt="Tailwind CSS Navbar component"
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    </div>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li>
+                        <a class="justify-between">
+                            Your Profile
+                            <span class="badge">New</span>
+                        </a>
+                    </li>
+                    <li><a>Settings</a></li>
+                    <li><a>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endblock navbar %}
+
+    {% block content %}
+
+    <div class="hero bg-base-200 min-h-screen">
+        <div class="hero-content flex-col lg:flex-row">
+            <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+            <div>
+                <h1 class="text-5xl font-bold">Discover, Rate, and Share Your Favorite Anime!</h1>
+                <p class="py-6">
+                    Welcome to AniRate, where every frame tells a story. Explore a world of captivating narratives,
+                    breathtaking animation, and unforgettable characters. Whether you're a seasoned otaku or just
+                    starting your journey, find your next obsession and join a community passionate about all things
+                    anime. Start exploring today!
+                </p>
+                <button class="btn btn-primary">
+                    Explore Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    {% endblock content %}
+
+    <footer class="footer bg-neutral text-neutral-content items-center p-4">
+        <aside class="grid-flow-col items-center">
+            <p>Copyright © 2024 - All right reserved</p>
+        </aside>
+        <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+            <a href="https://github.com/Assyyn">
+                {% load static %}
+                <img src="{% static 'images/logos/github-mark-white.svg' %}" width="24" height="24" alt="Github Logo">
+            </a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
