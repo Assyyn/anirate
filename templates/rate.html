@@ -1,0 +1,36 @@
+{% extends "base.template.html" %}
+
+{% block content %}
+<div class="max-w-sm mx-auto mt-20 card bg-base-100 shadow-xl">
+    <figure>
+        <img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album" />
+    </figure>
+    <div class="card-body">
+        <h2 class="card-title">Title</h2>
+        <p>Description</p>
+        <div class="card-actions justify-end">
+            <!-- Open rating popup -->
+            <label for="rate" class="btn">Rate</label>
+
+            <!-- Put this part before </body> tag -->
+            <input type="checkbox" id="rate" class="modal-toggle" />
+            <div class="modal" role="dialog">
+                <div class="modal-box">
+                    <div class="rating rating-md">
+                        <form>
+                            <input type="radio" name="rating" class="rating-hidden" />
+                            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-500" />
+                            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-500"
+                                checked="checked" />
+                            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-500" />
+                            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-500" />
+                            <input type="radio" name="rating" class="mask mask-star-2 bg-orange-500" />
+                        </form>
+                    </div>
+                </div>
+                <label class="modal-backdrop" for="rate">Close</label>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -12,10 +12,10 @@ module.exports = {
     },
     daisyui: {
         themes: [
-            // 'cupcake',
+            'cupcake',
             'dracula',
         ],
     },
-    // darkMode : ['class', '[data-theme]="dracula"'],
+    darkMode: ['class', '[data-theme]="dracula"'],
 }
 
